@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //객체(object) 타입
+        var obj = {id:100,name:'james',age:20};
+
+        var id = obj.id; // 객체의 값에 접근하기 위해서 .사용
+        var name = obj.name;
+        var age = obj.age;
+        obj.height = 173.5;
+
+        console.log(obj);
+        
+        delete obj.age;
+        console.log(obj);
+        
+        obj["weight"] = 50; // 속성을 추가할 때 " "사용
+        console.log(obj);
+        
+        var obj2 = {id:100,money:10000,'likes fruits':true}; //space가 가능은하나 사용하면 안된다.
+
+        const user = {
+            name:'james',            
+        }
+        const n = 20;
+        //n = 30; // n은 변할 수 없는 값임  error
+        //console.log(n);
+
+        user.name = 'hong';
+        console.log(user);  // 객체 속성의 값을 바꾸는건 가능하나 , 속성을 바꾸진 못함
+        
+        console.log(user.name);
+        console.log(user['name']);
+
+
+
+    </script>
+</head>
+<body>
+    
+
+</body>
+</html>

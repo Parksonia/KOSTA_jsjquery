@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //문자열은 숫자로 자동 형변환 됨 
+        console.log('2'>1); //false <= '0' 숫자로 형변환 되어 처리됨
+        console.log('01' == 1); // true
+        console.log('1' === 1); //false <= (===) 연산자는 데이터 타입까지 비교함
+
+
+        console.log(true == 10); //false
+        console.log(false == 0);  //true
+
+        var a = 0;
+        console.log(Boolean(0)); //false
+        var b = '0';
+        console.log(Boolean(b)); //true
+
+        console.log(a==b); // true <= b가 number타입으로 자동형변환됐으니 true
+    
+    
+        console.log(typeof null); //object
+        console.log(typeof undefined); //undifined
+        
+        console.log(null === undefined); //false
+        console.log(null == undefined) ; //true <= false == false
+
+        let d = 2**3; 
+        console.log(d);
+
+        let r = 4**(1/2); // 루트를 표현  
+        console.log(r);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

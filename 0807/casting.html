@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //String => number
+        // 문자열의 경우 숫자로 알아서 자동 형변환 
+        // +연산자의 경우에만,Number 형변환 연산자 or (+)붙여주기
+        var n = "6"/"3"; //문자열 연산을 자동으로 형변환 해줌
+        var m = "6"+"3"; // +연산자의 경우는 예외 왜냐면, 문자열을 이어주는 경우에 사용해야하니까
+        console.log(n);
+        console.log(m);
+
+        var x = prompt("숫자입력");
+        var y = prompt("숫자입력");
+        //console.log(+x+(+y)); // 문자열을 숫자 연산으로 형변환 해주려면 + 붙이거나
+        //var res = Number(x)+Number(y); //형변환 연산자인 Number를 사용함
+        
+        console.log((+x)+(+y));
+        
+        //boolean =>String
+        //String 형변환 연산자
+        var value = true;
+        console.log(typeof value);
+        console.log(typeof String(value));
+        
+        //number => boolean
+        //String => boolean
+        //Boolean 형변환 연산자 사용
+        console.log(Boolean(1));
+        console.log(Boolean(0)); // 0 만 false 나머지는 다 true
+        console.log(Boolean(-1));
+        console.log(Boolean(100));
+        
+        console.log(Boolean("str")); // 문자열의 경우 ""만(빈문자열) false 나머지 true
+        console.log(Boolean(""));
+        console.log(Boolean("0"));
+        console.log(Boolean(" "));
+        
+        //Boolean() => false
+        console.log(Boolean(null));
+        console.log(Boolean(undefined));
+        console.log(Boolean(NaN));
+        console.log(Boolean(""));
+        console.log(Boolean(0)); 
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

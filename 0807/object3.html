@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function makeUser(name,age){
+            return {
+                name, // name: name
+                age //age:age 형태이다.
+            } // javascript에서 { } 는 객체를 의미함. 객체의 형태는  {key:value}
+        }
+        
+        var name = 'hong';
+        var age = 20;
+        var obj = {name:name,age:age}; //value 자리에 데이터가 있어야지~
+
+        
+        var users =[makeUser('hong',20),makeUser('song',30),makeUser('tong',25)];
+        console.log(users);
+        console.log(typeof users);
+
+
+        function bubbleSort(arr,compare) {
+            for(var i=0; i<arr.length-1; i++) {
+                for(var j=0;j<arr.length-i-1;j++){
+                    if(compare(arr[j],arr[j+1])>0){
+                        var temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                }
+            }
+        }
+        
+      
+        //나이순 정렬
+         bubbleSort(users,(user1,user2) => user1.age-user2.age);
+         console.log(users);
+
+
+         for(var idx in users) {
+             console.log(users[idx]);
+         }
+
+         for(var user in users) {
+             console.log(user);
+        }
+   
+
+        var[user1,user2,user3] = users; // 속성 선언(변수임)
+        console.log(user1)
+        console.log(user2)
+        console.log(user3)
+
+        var arr = [user1,user2,user3]; // 데이터임
+        var{name,age} = user;
+        var[x,y,z] = [1,2,3]; //x,y,z는 변수 
+        var{n,m} ={n:10,m:100}; //n.m: 객체의 키다.
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

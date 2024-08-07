@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            //.closest : 부모를 추적해서 찾기
+            let chapter = document.querySelector('.chapter'); //id
+            console.log(chapter.closest('.book'));
+            console.log(chapter.closest('.contents'));
+            console.log(chapter.closest('.h1'));
+        }
+    </script>
+</head>
+<body>
+    <h1>목차</h1>
+    <div class=" contents">
+        <ul class="book">
+            <li class="chapter">1장</li>
+            <li class="chapter">2장</li>
+        </ul>
+    </div>
+</body>
+</html>

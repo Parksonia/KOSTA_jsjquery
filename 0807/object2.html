@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var key = "nick";
+        const user = {
+            [key]:'hong', // const지만 속성명을 가변으로 할 때 
+            age:30
+         };
+
+
+         console.log(user);
+         var is = "name" in user; //"속성명" 이 있는지 확인
+         console.log(is); //false
+
+         for(var key in user) { // for.. in : 객체의 속성을 조회할 때 사용 
+            console.log(`${key}:${user[key]}`);
+         }
+         const{nick,age} = user; //const{user의변수,user의변수}= user;
+         console.log(nick);
+         console.log(age);
+
+    </script>
+
+    
+</head>
+<body>
+    
+</body>
+</html>

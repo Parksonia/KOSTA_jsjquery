@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // document.write("HELLO! JS!") // 화면에 출력
+        // alert("HELLO JS!") // 알럿창에 띄우기 
+        console.log("HELLO JS!"); // 개발자모드 console
+
+        var radius = 10;
+        var pi =3.1415;
+        console.log(2*radius*pi);
+
+        /*
+        변수의 종류
+        var (함수 단위 )
+        1. 중복으로 선언되고 재할당이 모두 가능 (마지막 할당된 값 저장)
+        2. 변수 선언된 함수 내부에선 참조가능하나, 외부로는 참조 불가
+        3. 함수 내 선언= 지역변수, 외부선언= 전역변수로 사용됨
+        
+        let (블록 단위) 
+        1.중복 선언을 허용하지 않음
+        2.블록 내에 선언된 변수는 외부에서 참조할 수 없다.
+
+        const (블록 단위) 
+        1.java의 final과 같이 한번 선언하면 바꿀 수 없다.
+        2.블록 내에 선언된 변수는 외부에서 참조할 수 없다.
+        */
+        let var1;
+        const var2 = 20;
+        
+        //스크립트의 데이터 타입 알아보기 
+        var str = 'hong'; // java와 달리 String만 존재, 따라서 "" ,'' 둘 다 써도 됨
+        console.log(typeof radius); //number
+        console.log(typeof pi); //number
+        console.log(typeof str); //string
+
+        function func() {}
+        console.log(typeof func); // function도 하나의 타입이다.
+
+        var arr =[];
+        console.log(typeof arr); // object
+
+        var obj = {name:'hong',age:30}; 
+        console.log(typeof arr); // object 객체 타입이다
+
+        var b = true;
+        console.log(typeof b); //boolean
+
+        var n; // 데이터가 들어갈 때 타입이 지정 되므로 undifined 라고 함
+        console.log(typeof n); //undifined
+        
+        var nl = null;
+        console.log(typeof nl); //object 
+
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

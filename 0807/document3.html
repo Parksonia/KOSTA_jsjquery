@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //<getElement*, querySelector*>
+        //getElementById :1개 ,document로만 호출함.(ex: document.getElementById('article'))
+        
+        //하나가 아니라 여러개 일 때
+        //getElemnetsByTagName :n개,document또는 다른 element를 통해 호출함(ex: document.getElementsByTagName('input'),form.getElementsByTagName('input')) 
+        //getElementsByClassName :n개 document또는 다른 element를 통해 호출함(ex:  document.getElementsByClassName('age'),form..getElementsByClassName('age')) 
+        //getElementsByName :n개 document또는 다른 element를 통해 호출함(ex:  document.getElementsByName('age'),form.getElementsByName('age')) 
+        
+        
+        window.onload =function() {
+            //1.doucument.getElementById
+            let elem = document.getElementById("elem");
+            elem.style.background = 'red';
+            //elem.style.background = 'red'; 이렇게 단독으로 쓸 수도 있음
+            //elem.style.background ='red' // 아이디는 특정하나만 적용되기 때문에 스타일 적용 안됨
+            
+            //elem_content.style.color ='blue'; // id : (-)을 썼다면,이와 같이 바로 스타일을 지정 못함
+            let elem_content = document.getElementById("elem-content"); // 이렇게 해야함
+            elem_content.style.color = 'blue';
+
+             //2. document.getElemnetsByTagName
+            let ps = document.getElementsByTagName("p"); // 여러개니까 배열형태
+            //ps.style.color = 'green'; // error 배열형태라 안됨 하나씩 지정해줘야함 
+            for(let i of ps) {
+                i.style.color = 'green';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id = "elem">
+        <div id="elem-content">Element</div>   
+    </div>
+    <!--id 특정 하나의 엘리먼트에 유일하게 적용됨-->
+    <h1 id="elem">Header</h1>
+    
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore vitae, est excepturi recusandae facere et, distinctio provident quos sed tenetur ut debitis magni sit fugiat in aliquid enim hic doloremque?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore vitae, est excepturi recusandae facere et, distinctio provident quos sed tenetur ut debitis magni sit fugiat in aliquid enim hic doloremque?</p>
+
+</body>
+</html>

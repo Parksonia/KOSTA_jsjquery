@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ` (backtick)
+        // 데이터를 ....
+
+        var name = 'hong';
+        var age = 20;
+        var persons ={name:'hong',age:20};
+        var persons = [{name:'hong',age:20},{name:'song',age:30},{name:'tong',age:50}];
+        var info = `이름:${name},나이:${age}`; //bactick(`)으로 감싸서 사용
+        console.log(info);
+
+        var infot = `<table><tr><td>${name}</td><td>${age}</td></tr></table>`;
+        var infot = `이름:<b>${name}</b>,나이:<b>${age}</b>`;
+        document.write(infot);
+    </script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+</body>
+</html>
